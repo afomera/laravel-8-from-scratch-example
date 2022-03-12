@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use App\Models\User;
 
 class RegisterController extends Controller
@@ -22,9 +23,10 @@ class RegisterController extends Controller
         ]);
 
         // create the user
-        User::create($attributes);
+        $user = User::create($attributes);
 
-        // TODO: sign in the user here
+        // sign in the user here
+        auth()->login($user);
 
         // redirect to the home page
         return redirect('/')->with('success', 'Your account has been created!');
