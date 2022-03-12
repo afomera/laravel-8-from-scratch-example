@@ -2,6 +2,9 @@
 
 namespace Database\Factories;
 
+use App\Models\User;
+use App\Models\Post;
+use App\Models\Comment;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -17,7 +20,9 @@ class CommentFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'post_id' => Post::factory(),
+            'user_id' => User::factory(),
+            'body' => '<p>' . implode('</p><p>', $this->faker->paragraphs(2)) . '</p>'
         ];
     }
 }
