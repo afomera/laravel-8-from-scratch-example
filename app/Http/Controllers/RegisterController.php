@@ -23,6 +23,7 @@ class RegisterController extends Controller
 
         // create the user
         User::create($attributes);
+
         // redirect to the home page
         return redirect('/');
     }

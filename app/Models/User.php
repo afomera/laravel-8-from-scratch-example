@@ -43,6 +43,17 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    // Can also use accessors to access attributes and do operations on them
+    // public function getUsernameAttribute($username)
+    // {
+    //     return ucwords($username);
+    // }
+
+    // Eloquent mutator to hash the password
+    public function setPasswordAttribute($password) {
+        $this->attributes['password'] = bcrypt($password);
+    }
+
     public function posts()
     {
         return $this->hasMany(Post::class);
