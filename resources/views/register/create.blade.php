@@ -14,7 +14,11 @@
                     <input type="text" name="name" id="name" class="
                         shadow appearance-none border rounded w-full py-3 px-3
                         text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                        autocomplete="name" placeholder="Sara Conner">
+                        autocomplete="name" placeholder="Sara Conner" value="{{ old('name') }}">
+
+                    @error('name')
+                        <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
+                    @enderror
                 </div>
 
                 <div class="mb-6">
@@ -25,7 +29,11 @@
                     <input type="text" name="username" id="username" class="
                         shadow appearance-none border rounded w-full py-3 px-3
                         text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                        autocomplete="username" placeholder="sara.conner">
+                        autocomplete="username" placeholder="sara.conner" value="{{ old('username') }}">
+
+                    @error('username')
+                        <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
+                    @enderror
                 </div>
 
 
@@ -37,7 +45,11 @@
                     <input type="email" name="email" id="email" class="
                         shadow appearance-none border rounded w-full py-3 px-3
                         text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                        autocomplete="emal" placeholder="sara.conner@starship.com">
+                        autocomplete="email" placeholder="sara.conner@starship.com" value="{{ old('email') }}">
+
+                    @error('email')
+                        <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
+                    @enderror
                 </div>
 
 
@@ -50,6 +62,10 @@
                         shadow appearance-none border rounded w-full py-3 px-3
                         text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                         autocomplete="password" placeholder="hunter2">
+
+                    @error('password')
+                        <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
+                    @enderror
                 </div>
 
                 <div class="mb-6">
