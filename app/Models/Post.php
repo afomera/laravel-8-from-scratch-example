@@ -26,6 +26,16 @@ class Post extends Model
 
     protected $guarded = ['id'];
 
+    public function scopeFilter($query, array $filters) // Post::newquery->filter() {
+    {
+        if ($filters['search'] ?? false) {
+            $query
+                ->where('title', 'like', '%' . request('search') . '%')
+                ->orWhere('body', 'like', '%' . request('search') . '%');
+        }
+    }
+
+
     public function author()
     {
         return $this->belongsTo(User::class, 'user_id');
