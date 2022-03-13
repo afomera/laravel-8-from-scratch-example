@@ -21,3 +21,5 @@ Route::post("sessions", [SessionsController::class, 'store'])->middleware("guest
 
 // Must be logged in to log out.
 Route::post("logout", [SessionsController::class, 'destroy'])->name("logout")->middleware("auth");
+
+Route::get("admin/posts/create", [PostController::class, 'create'])->middleware("admin");
