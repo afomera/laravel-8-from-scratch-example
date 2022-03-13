@@ -4,11 +4,11 @@
         <form method="POST" action="/admin/posts" enctype="multipart/form-data">
             @csrf
 
-            <x-form.input name="title" />
-            <x-form.input name="slug" />
-            <x-form.input name="thumbnail" type="file" />
-            <x-form.textarea name="excerpt" rows="3" />
-            <x-form.textarea name="body" rows="10" />
+            <x-form.input name="title" required />
+            <x-form.input name="slug" required />
+            <x-form.input name="thumbnail" type="file" required />
+            <x-form.textarea name="excerpt" rows="3" required />
+            <x-form.textarea name="body" rows="10" required />
 
             <x-form.field>
                 <x-form.label name="category">Category</x-form.label>
