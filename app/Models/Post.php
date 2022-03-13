@@ -22,6 +22,7 @@ class Post extends Model
         'excerpt',
         'body',
         'category_id',
+        'user_id',
     ];
 
     protected $guarded = ['id'];
