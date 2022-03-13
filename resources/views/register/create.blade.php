@@ -11,7 +11,8 @@
                         Name
                     </label>
 
-                    <input type="text" name="name" id="name" class="
+                    <input type="text" name="name" id="name"
+                        class="
                         shadow appearance-none border rounded w-full py-3 px-3
                         text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                         autocomplete="name" placeholder="Sara Conner" value="{{ old('name') }}">
@@ -26,7 +27,8 @@
                         Username
                     </label>
 
-                    <input type="text" name="username" id="username" class="
+                    <input type="text" name="username" id="username"
+                        class="
                         shadow appearance-none border rounded w-full py-3 px-3
                         text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                         autocomplete="username" placeholder="sara.conner" value="{{ old('username') }}">
@@ -42,7 +44,8 @@
                         Email
                     </label>
 
-                    <input type="email" name="email" id="email" class="
+                    <input type="email" name="email" id="email"
+                        class="
                         shadow appearance-none border rounded w-full py-3 px-3
                         text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                         autocomplete="email" placeholder="sara.conner@starship.com" value="{{ old('email') }}">
@@ -58,7 +61,8 @@
                         Password
                     </label>
 
-                    <input type="password" name="password" id="password" class="
+                    <input type="password" name="password" id="password"
+                        class="
                         shadow appearance-none border rounded w-full py-3 px-3
                         text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                         autocomplete="password" placeholder="hunter2">
@@ -69,13 +73,11 @@
                 </div>
 
                 <div class="mb-6">
-                    <button type="submit"
-                            class="bg-blue-400 text-white rounded py-2 px-4 hover:bg-blue-500"
-                            >
+                    <button type="submit" class="bg-blue-400 text-white rounded py-2 px-4 hover:bg-blue-500">
                         Submit
                     </button>
                 </div>
             </form>
         </main>
-    </section>
+        </section>
 </x-layout>
