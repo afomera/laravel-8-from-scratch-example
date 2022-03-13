@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Models\User;
+use Illuminate\Support\Facades\Gate;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\ServiceProvider;
 
@@ -26,5 +28,10 @@ class AppServiceProvider extends ServiceProvider
     {
         // Could do this to globally disable the mass assignment protection
         // Model::unguard();
+
+        // Create a gate
+        Gate::define('admin', function (User $user) {
+            return $user->username === 'afomera';
+        });
     }
 }
